@@ -1,0 +1,63 @@
+{
+  "name": "supermarket-admin",
+  "version": "1.0.0",
+  "description": "Supermarket Management System - Admin Dashboard",
+  "main": "build/electron.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "electron": "electron .",
+    "electron-dev": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-pack": "electron-builder"
+  },
+  "build": {
+    "appId": "com.supermarket.admin",
+    "productName": "Supermarket Admin",
+    "files": [
+      "build/**/*",
+      "electron/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    }
+  },
+  "dependencies": {
+    "axios": "^1.12.2",
+    "date-fns": "^4.1.0",
+    "electron-is-dev": "^3.0.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.9.4",
+    "react-toastify": "^11.0.5",
+    "recharts": "^2.15.4",
+    "tailwindcss": "^3.4.18"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.2.1",
+    "electron": "^34.5.8",
+    "electron-builder": "^25.1.8",
+    "postcss": "^8.5.6",
+    "react-scripts": "^5.0.1",
+    "wait-on": "^8.0.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version"
+    ]
+  },
+  "author": "Your Name",
+  "homepage": "."
+}

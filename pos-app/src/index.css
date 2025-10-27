@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* بطاقات المنتج */
+.product-card {
+  @apply cursor-pointer border rounded-lg p-3 hover:shadow transition select-none;
+}
+
+/* عنصر السلة */
+.cart-item {
+  @apply border rounded-lg p-3 bg-white;
+}
+
+/* أزرار النمباد */
+.numpad-btn {
+  @apply py-3 rounded-lg font-bold bg-gray-200 hover:bg-gray-300 text-lg;
+}
+
+/* مودال الدفع */
+.modal-overlay {
+  @apply fixed inset-0 bg-black/40 flex items-center justify-center z-50;
+}
+.modal-content {
+  @apply bg-white rounded-2xl p-6 shadow-xl w-full;
+}
